@@ -52,8 +52,8 @@
     {
       "group": "Get Started",
       "pages": [
-        "api_keys",
         "create_api_account",
+        "api_keys",
         "introduction",
         "quickstart",
         "development",
