@@ -3,10 +3,9 @@ title: 'The First Time 😏'
 description: 'Lets generate your first AI Song with Lalals API'
 ---
 
-1. All your requests will go to **api.lalals.com**
-2. Lalals API offers 6 different API features: 
-
-| Feature | Description                           |
+<AccordionGroup>
+  <Accordion title="Different API Features 🦾">
+  | Feature | Description                           |
 | -------- | ------------------------------------- |
 | Music AI     | Promt to Song|
 | Music AI + Voice      | Promt + Selected Voice to Song                        |
@@ -14,12 +13,26 @@ description: 'Lets generate your first AI Song with Lalals API'
 | Cover   | Create a Cover song |
 | Text To Speech   | Selected Voice will say anything |
 | Vocal/Instrumental   | Extract Vocals or Instrumentals |
+    
+  </Accordion>
+
+</AccordionGroup>
+
 
 #### Lets generate a country song about our Love towards AI Generated Music ❤️🤠
 
-3. For this we will use the **Music AI** Feature, instead of `<api_key>` use your **own API Key** from the Dashboard
+1. We will use the **Music AI** Feature, instead of `<api_key>` use your **own API Key** from the Dashboard
 
-4. Instead of `http://webhook.yourwebsite.com` please create a webhook on your server, when the generation is finnished we will send the url of the result to your webhook. (You dont have a webhook ? Click here)
+2. Instead of `http://webhook.yourwebsite.com` please create a webhook on your server, when the generation is finnished we will send the url of the result to your webhook.
+
+<AccordionGroup>
+  <Accordion title="You dont have a Webhook ?">
+  We strongly advise you to create a webhook this will to **better Performance** and we dont need to **rate limit** your requests, if you can't create a Webhook because the code will run on a **User Device**, here is a way you can receive you result.
+    
+  </Accordion>
+
+</AccordionGroup>
+
 ```
 curl -X 'POST' \ 
 'https://api.lalals.com/api/public/v1/MusicAI' \
@@ -32,7 +45,7 @@ curl -X 'POST' \
 }'
 ```
 
-5. When the Generation is finnished your Webhook will receive the url of the generated song.
+3. When the Generation is finnished your Webhook will receive the url of the generated song.
 
 ```
 {
