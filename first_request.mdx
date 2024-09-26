@@ -17,7 +17,9 @@ description: 'Lets generate your first AI Song with Lalals API'
 
 #### Lets generate a country song about our Love towards AI Generated Music ❤️🤠
 
-3. For this we will use the Music AI Feature
+3. For this we will use the **Music AI** Feature, instead of `<api_key>` use your **own API Key** from the Dashboard
+
+4. Instead of `http://webhook.yourwebsite.com` please create a webhook on your server, when the generation is finnished we will send the url of the result to your webhook. (You dont have a webhook ? Click here)
 ```
 curl -X 'POST' \ 
 'https://api.lalals.com/api/public/v1/MusicAI' \
@@ -26,6 +28,24 @@ curl -X 'POST' \
 -H 'Content-Type: application/json' \
 -d '{
 "music_style": "Song about my love to AI Music in Country Style",
-"webhook_url": "http://api.lalals.com",
+"webhook_url": "http://webhook.yourwebsite.com",
 }'
 ```
+
+5. When the Generation is finnished your Webhook will receive the url of the generated song.
+
+```
+{
+"success": true, 
+"task_id": str, 
+"conversion_id": str, 
+"audio_url": str (signed aws url valid for 1 day), 
+"conversion_cost" : float, 
+"title" : str, 
+"lyrics" : str, 
+"prompt" : str ('' if not available),
+"music_style" : str ('' if not available)
+}
+```
+
+#### Congratulation You Generated Your First Song with Lalals API 🎉
