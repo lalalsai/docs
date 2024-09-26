@@ -52,6 +52,7 @@
     {
       "group": "Get Started",
       "pages": [
+        "create_api_account",
         "introduction",
         "quickstart",
         "development",
