@@ -18,3 +18,17 @@ description: 'Lets generate your first AI Song with Lalals API'
 #### Lets generate a country song about our Love towards AI Generated Music ❤️🤠
 
 3. For this we will use the Music AI Feature
+```
+curl -X 'POST' \ 
+'https://api.lalals.com/api/public/v1/MusicAI' \
+-H 'accept: application/json' \
+-H 'Authorization: <api_key>' \
+-H 'Content-Type: application/json' \
+-d '{
+"music_style": "song about football match between man city and arsenal",
+"webhook_url": "http://api.lalals.com",
+"lyrics": "",
+"voice_id": "Drake"
+}'
+
+```
